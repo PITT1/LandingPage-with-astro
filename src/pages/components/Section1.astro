@@ -2,9 +2,11 @@
 import { Image } from "astro:assets";
 import tasa from '../../../public/tasa.png';
 import leche from '../../../public/leche.png';
+import NavBar from './NavBar.astro';
 ---
 
 <section>
+    <NavBar/>
     <div class="container">
         <div class="presentation">
             <h1>Expresso Yourself.</h1>
@@ -22,13 +24,16 @@ import leche from '../../../public/leche.png';
 </section>
 
 <style>
-.container {
+section {
     background-image: url(heroFondo.jpg);
-    height: 100vh;
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.container {
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
