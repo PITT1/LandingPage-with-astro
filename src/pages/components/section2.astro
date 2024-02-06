@@ -7,15 +7,27 @@
         <div class="image1">
             <img src="/cafepicture1.jpg" alt="cafe en una mesa">
         </div>
-        <div class="ourStory">
+        <article class="ourStory">
             <div>
                 <h2>Discover</h2>
-                <h1>Our Story</h1>
+                <h1>OUR STORY</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero perferendis praesentium culpa odit ab, quos necessitatibus nam quis! Quam, accusantium. Sequi doloremque eligendi incidunt harum!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque velit alias temporibus blanditiis placeat libero animi quaerat, eligendi harum aliquam atque reiciendis, suscipit laboriosam minima, unde inventore corrupti ipsa aut numquam aliquid? Unde, iure itaque voluptatem molestias saepe qui?</p>
                 <a href="#">More About Us</a>
             </div>
             <img src="/cafeSplash.png" alt="splash de cafe">
+        </article>
+    </div>
+
+    <div class="container2">
+        <div>
+            <div>
+                <h2>Discover</h2>
+                <h1>OUR MENU</h1>
+            </div>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque velit deserunt aperiam voluptas eaque quis amet dignissimos quo delectus.</p>
+            </article>
         </div>
     </div>
 </section>
@@ -71,4 +83,34 @@
     text-decoration: none;
     color: rgb(206, 177, 15);
 }
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: aliceblue;
+}
+
+.container2 div {
+    width: 50%;
+    display: flex;
+}
+
+.container2 div div {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.container2 div article {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.container2 div div h2 {
+    color: rgb(206, 177, 15);
+}
+
 </style>

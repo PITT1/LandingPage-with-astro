@@ -1,0 +1,69 @@
+---
+
+---
+
+<section>
+    <div class="container1">
+        <div class="images">
+            <img src="/taza-cafe.jpg" alt="tasa de cafe">
+            <img src="cafeSplash.png" alt="splash de cafe">
+        </div>
+        <article>
+            <div>
+                <h1>HONDURAS COFFE</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam pariatur libero.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<style>
+.container1 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.images {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.images img {
+    position: absolute;
+}
+
+.images img:first-child {
+    border-radius: 50%;
+    height: 100%;
+    top: 0;
+    left: 40%;
+    z-index: 2;
+}
+
+.images img:last-child {
+    height: 150%;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    transform: rotate(90deg);
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article div {
+    height: 50%;
+    width: 50%;
+}
+
+article div h1 {
+    color: rgb(206, 177, 15);
+}
+</style>
