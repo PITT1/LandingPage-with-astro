@@ -15,6 +15,17 @@
             </div>
         </article>
     </div>
+
+    <div class="container2">
+        <article>
+            <h1>ARBAR MICROMILL</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores perferendis aliquid magni, vel mollitia?</p>
+        </article>
+        <div class="images2">
+            <img src="/postre1.jpg" alt="postre con cafe">
+            <img src="cafeSplash.png" alt="splash de cafe">
+        </div>
+    </div>
 </section>
 
 <style>
@@ -65,5 +76,53 @@ article div {
 
 article div h1 {
     color: rgb(206, 177, 15);
+    font-size: 1.8rem;
+}
+
+.container2 {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 article {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 30%;
+}
+
+.container2 article h1 {
+    font-size: 1.8rem;
+    width: 100%;
+    height: auto;
+    color: rgb(206, 177, 15);
+}
+
+.images2 {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+.images2 img:first-child {
+    position: absolute;
+    border-radius: 50%;
+    top: -20%;
+    left: 50%;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.images2 img:last-child {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    height: 400px;
+    width: auto;
+    transform: rotate(-90deg);
 }
 </style>
