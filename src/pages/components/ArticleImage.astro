@@ -1,0 +1,81 @@
+---
+const {image, imageAlt, title, subTitle, paragraph, paragraph2} = Astro.props;
+---
+
+<section>
+    <div class="container1">
+        <div class="image1">
+            <img src={image} alt={imageAlt}>
+        </div>
+        <article class="ourStory">
+            <div>
+                <h2>{title}</h2>
+                <h1>{subTitle}</h1>
+                <p>{paragraph}</p>
+                <p>{paragraph2}</p>
+                <a href="#">More About Us</a>
+            </div>
+            <img src="/cafeSplash.png" alt="splash de cafe">
+        </article>
+    </div>
+</section>
+
+<style>
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.image1 {
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.image1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ourStory {
+    height: 400px;
+    width: 600px;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.ourStory img {
+    position: absolute;
+    height: 250px;
+    top: 65%;
+    left: 50%;
+}
+
+.ourStory div {
+    margin: 40px;
+}
+
+.ourStory div p {
+    margin: 1.3rem 0px;
+}
+
+.ourStory div h2 {
+    color: rgb(206, 177, 15);
+    font-size: 19px;
+    margin: 0;
+}
+
+.ourStory div h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.ourStory div a {
+    text-decoration: none;
+    color: rgb(206, 177, 15);
+    margin-top: 1rem;
+}
+</style>
