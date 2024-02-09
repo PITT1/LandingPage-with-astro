@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import tasa from '../../../public/tasa.png';
-import leche from '../../../public/leche.png';
+import tasa from '../../Images/tasa.png';
+import leche from '../../Images/leche.png';
 import NavBar from './NavBar.astro';
 ---
 
@@ -17,8 +17,8 @@ import NavBar from './NavBar.astro';
             </div>
         </div>
         <div class="images">
-            <Image class="tasapng" src={tasa} width={500} height={500} alt="tasa de cafe"/>
-            <Image class="lechepng" src={leche} width={900} height={700} alt="splash de leche"/>
+            <Image class="tasapng" src={tasa} height={500} alt="tasa de cafe"/>
+            <Image class="lechepng" src={leche} height={700} alt="splash de leche"/>
         </div>
     </div>
 </section>
@@ -28,36 +28,42 @@ section {
     background-image: url(heroFondo.jpg);
     object-fit: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .container {
     position: relative;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .presentation {
-height: 60%;
-color: aliceblue;
-width: 500px;
-display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: center;
+    height: 800px;
+    color: aliceblue;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    z-index: 3;
 }
 
 .presentation h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
+}
+
+.presentation p {
+    padding: 20px 5px;
 }
 
 .presentation div {
     display: flex;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .presentation div button {
@@ -67,6 +73,12 @@ justify-content: center;
     outline: none;
     color: aliceblue;
     cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.presentation div button:hover {
+    background-color: rgb(124, 97, 97);
+    color: white;
 }
 
 .presentation div button:last-child {
@@ -77,9 +89,8 @@ justify-content: center;
 .images {
     position: relative;
     width: 500px;
-    height: 100%;
+    height: 800px;
     background-color: rgba(0, 0, 0, 0.884);
-    border-radius: 10%;
     -webkit-box-shadow: 0px 0px 168px 142px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 168px 142px rgba(0,0,0,1);
     box-shadow: 0px 0px 168px 142px rgba(0,0,0,1);
@@ -96,6 +107,6 @@ justify-content: center;
     position: absolute;
     z-index: 1;
     top: -10%;
-    left: -30%;
+    left: -50%;
 }
 </style>
