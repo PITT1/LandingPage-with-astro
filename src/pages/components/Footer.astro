@@ -1,5 +1,7 @@
 ---
-
+import { Image } from 'astro:assets';
+import instagramlogo from '../../Images/instagramlogo.png';
+import facebooklogo from '../../Images/facebooklogo.png';
 ---
 
 <footer>
@@ -14,8 +16,8 @@
     </div>
     <div class="container2">
         <ol>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">facebook</a></li>
+            <li><a href="#"><Image src={instagramlogo} alt='instagram logo' class="instalogo"></a></li>
+            <li><a href="#"><Image src={facebooklogo} alt='facebook logo' class="facelogo"/></a></li>
         </ol>
     </div>
     <div class="company">
@@ -69,4 +71,17 @@ ol li a {
 .company h1{
     font-size: 1.3rem;
 }
+
+.instalogo {
+    object-fit: cover;
+    height: 25px;
+    width: auto;
+}
+
+.facelogo {
+    object-fit: cover;
+    height: 25px;
+    width: auto;
+}
+
 </style>
