@@ -17,8 +17,8 @@ import NavBar from './NavBar.astro';
             </div>
         </div>
         <div class="images">
-            <Image class="tasapng" src={tasa} height={500} alt="tasa de cafe"/>
-            <Image class="lechepng" src={leche} height={700} alt="splash de leche"/>
+            <Image class="tasapng" src={tasa} alt="tasa de cafe"/>
+            <Image class="lechepng" src={leche} alt="splash de leche"/>
         </div>
     </div>
 </section>
@@ -26,7 +26,7 @@ import NavBar from './NavBar.astro';
 <style>
 section {
     background-image: url(heroFondo.jpg);
-    object-fit: cover;
+    object-fit: contain;
     background-position: center;
     background-size: cover;
 }
@@ -40,9 +40,9 @@ section {
 }
 
 .presentation {
-    height: 800px;
+    height: 550px;
     color: aliceblue;
-    width: 600px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -88,8 +88,8 @@ section {
 
 .images {
     position: relative;
-    width: 500px;
-    height: 800px;
+    width: 450px;
+    height: 600px;
     background-color: rgba(0, 0, 0, 0.884);
     -webkit-box-shadow: 0px 0px 168px 142px rgba(0,0,0,1);
     -moz-box-shadow: 0px 0px 168px 142px rgba(0,0,0,1);
@@ -97,6 +97,8 @@ section {
 }
 
 .tasapng {
+    height: 400px;
+    width: auto;
     position: absolute;
     z-index: 2;
     top: 30%;
@@ -104,9 +106,22 @@ section {
 }
 
 .lechepng {
+    height: 700px;
+    width: auto;
     position: absolute;
     z-index: 1;
     top: -10%;
     left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .images {
+        display: none;
+    }
+
+    .presentation {
+        text-align: center;
+        z-index: 3;
+    }
 }
 </style>
