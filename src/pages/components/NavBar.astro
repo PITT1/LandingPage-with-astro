@@ -1,32 +1,40 @@
 ---
-
 ---
 
 <nav>
-    <div>
+    <div class="logo">
         <a href="#">Woke Up</a>
     </div>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Reservation</a></li>
-        <li><a href="#">Gallery</a></li>
+
+    <ul class="links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">About us</a></li>
+        <li class="link"><a href="#">Menu</a></li>
+        <li class="link"><a href="#">Blog</a></li>
+        <li class="link"><a href="#">Reservation</a></li>
+        <li class="link"><a href="#">Gallery</a></li>
     </ul>
+
     <div class="hamburguer">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
 </nav>
+<script>
+    const hamburguer = document.querySelector('.hamburguer');
+    const links = document.querySelector('.links');
+    hamburguer.addEventListener('click', () => {
+    links.classList.toggle("active");
+})
+</script>
 
 <style>
 
 .hamburguer {
     margin: 30px;
-    height: 75px;
-    width: 75px;
+    height: 55px;
+    width: 55px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,12 +50,13 @@
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav div a {
+.logo a {
     text-decoration: none;
     color: aliceblue;
     padding: 5px 30px;
@@ -55,7 +64,7 @@ nav div a {
     transition: 0.3s ease-in-out;
 }
 
-nav ul {
+.links {
     display: flex;
     z-index: 3;
     padding: 5px 30px;
@@ -63,7 +72,7 @@ nav ul {
     list-style-type: none;
 }
 
-nav ul li a{
+.link a{
     color: aliceblue;
     text-decoration: none;
     padding: 5px 20px;
@@ -71,7 +80,7 @@ nav ul li a{
     transition: 0.2s ease-in-out;
 }
 
-nav ul li a:hover {
+.link a:hover {
     background-color: rgba(211, 100, 100, 0.74);
 }
 
@@ -83,12 +92,39 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width:  700px) {
-    nav ul {
-        display: none;
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        background-color: transparent;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.2s ease-in;
+    }
+
+    .active{
+        height: 500px;
+        background-color: rgba(77, 77, 77, 0.63);
+    }
+
+    .link {
+        padding: 20px 0px;
+        letter-spacing: 4px;
     }
     
     .hamburguer {
         display: flex;
+        z-index: 7;
+    }
+
+    .logo a {
+        z-index: 7;
     }
 }
 
