@@ -24,7 +24,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: auto;
+    min-height: 400px;
     color: aliceblue;
 }
 
@@ -48,6 +49,30 @@
 .container2 div div h2 {
     color: rgb(206, 177, 15);
     font-size: 1.8rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container2 div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+    }
+
+    .container2 div div {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .container2 div div h2 {
+        width: auto;
+    }
+
+    .container2 div article {
+        margin-left: 0;
+        width: 90%;
+    }
 }
 
 </style>
