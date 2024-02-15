@@ -30,8 +30,9 @@
 
 <style>
 .container1 {
-    height: 50vh;
+    height: auto;
     width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     color: aliceblue;
@@ -39,8 +40,8 @@
 
 .images {
     position: relative;
-    width: 50%;
-    height: 100%;
+    width: 400px;
+    height: 300px;
 }
 
 .images img {
@@ -51,30 +52,31 @@
     border-radius: 50%;
     height: 100%;
     top: 0;
-    left: 40%;
+    left: 30%;
     z-index: 2;
 }
 
 .images img:last-child {
-    height: 150%;
+    height: 120%;
     top: -50%;
     left: -50%;
     z-index: 0;
     transform: rotate(90deg);
 }
 
-article {
+.container1 article {
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-article div {
+.container1 article div {
     height: 50%;
     width: 50%;
 }
 
-article div h1 {
+.container1 article div h1 {
     color: rgb(206, 177, 15);
     font-size: 1.8rem;
 }
@@ -124,5 +126,29 @@ article div h1 {
     height: 400px;
     width: auto;
     transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 900px) {
+    .container1 {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .images {
+        width: 400px;
+    }
+
+    .images img:first-child {
+        left: 10%;
+    }
+
+    .images img:last-child {
+        left: -90%;
+        top: -20%;
+    }
+
+    .container1 article {
+        margin-bottom: -80px;
+    }
 }
 </style>
