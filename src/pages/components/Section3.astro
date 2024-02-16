@@ -82,7 +82,7 @@
 }
 
 .container2 {
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,9 +90,12 @@
 
 .container2 article {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
     flex-direction: column;
     color: aliceblue;
-    width: 30%;
+    width: 300px;
 }
 
 .container2 article h1 {
@@ -103,16 +106,16 @@
 }
 
 .images2 {
-    width: 40%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
 .images2 img:first-child {
     position: absolute;
     border-radius: 50%;
-    top: -20%;
-    left: 50%;
+    top: 0%;
+    left: 30%;
     height: 400px;
     width: 400px;
     object-fit: cover;
@@ -120,6 +123,7 @@
 }
 
 .images2 img:last-child {
+    display: none;
     position: absolute;
     top: 0;
     left: 60%;
@@ -149,6 +153,57 @@
 
     .container1 article {
         margin-bottom: -80px;
+    }
+
+    .container1 article {
+        width: 90%;
+        text-align: center;
+    }
+
+    .container1 article div {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .images2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .images2 img:first-child {
+        position: relative;
+        left: 0;
+    }
+
+    .container2 article h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .container2 article p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .images img:first-child {
+        left: 10%;
+        width: 260px;
+    }
+
+    .images2 {
+        height: 200px;
+    }
+
+    .images2 img:first-child {
+        height: 260px;
+        width: 260px;
     }
 }
 </style>
