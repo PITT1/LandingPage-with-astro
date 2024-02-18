@@ -5,147 +5,205 @@
 <section>
     <div class="container1">
         <div class="images">
-            <img src="/tasa3.png" alt="tasa de cafe late">
-            <img src="/cafeSplash.png" alt="" srcset="">
+            <img src="/tasa3.png" alt="tasa de cafe">
+            <img src="cafeSplash.png" alt="splash de cafe">
         </div>
         <article>
             <div>
-                <h1>LATE SPECIAL</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt enim rerum officia iusto, vitae magnam tempore ex ducimus odio vel!</p>
+                <h1>Rico Coffe</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quibusdam pariatur libero.</p>
             </div>
         </article>
     </div>
 
     <div class="container2">
         <article>
-            <div>
-                <h1>SUGAR COFFE</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt enim rerum officia iusto, vitae magnam tempore ex ducimus odio vel!</p>
-            </div>
+            <h1>Sugar Coffe</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores perferendis aliquid magni, vel mollitia?</p>
         </article>
-        <div class="image2">
-            <img src="/tasa4.png" alt="tasa de cafe late">
-            <img src="/cafeSplash.png" alt="" srcset="">
+        <div class="images2">
+            <img src="/tasa4.png" alt="postre con cafe">
+            <img src="cafeSplash.png" alt="splash de cafe">
         </div>
     </div>
 </section>
 
 <style>
-section {
-    width: 100%;
-    height: auto;
-}
-
 .container1 {
+    height: auto;
     width: 100%;
-    height: 400px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    color: aliceblue;
 }
 
 .images {
-    width: 50%;
-    height: 100%;
     position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.images img {
+    position: absolute;
 }
 
 .images img:first-child {
-    position: absolute;
-    height: 300px;
-    width: auto;
+    border-radius: 50%;
+    height: 100%;
     top: 0;
     left: 30%;
     z-index: 2;
 }
 
 .images img:last-child {
-    position: absolute;
-    height: 400px;
-    top: 0;
-    left: 0%;
-    z-index: 1;
+    height: 90%;
+    top: 0%;
+    left: -50%;
+    z-index: 0;
     transform: rotate(90deg);
 }
 
 .container1 article {
-    height: 100%;
-    width: 50%;
-    color: aliceblue;
-    z-index: 2;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container1 article div {
-    height: 40%;
-    width: 100%;
-    margin: 40px;   
+    height: 50%;
+    width: 50%;
 }
 
 .container1 article div h1 {
-    font-size: 1.8rem;
     color: rgb(206, 177, 15);
-}
-
-.container1 article div p {
-    width: 400px;
-
+    font-size: 1.8rem;
 }
 
 .container2 {
-    height: 400px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: aliceblue;
-}
-
-.container2 article {
-    height: 100%;
-    width: 50%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.container2 article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    flex-direction: column;
+    color: aliceblue;
+    width: 300px;
+}
+
 .container2 article h1 {
     font-size: 1.8rem;
+    width: 100%;
+    height: auto;
     color: rgb(206, 177, 15);
 }
 
-.container2 article p {
-    width: 400px;
-}
-
-.image2 {
-    height: 100%;
-    width: 50%;
+.images2 {
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
-.image2 img:first-child {
+.images2 img:first-child {
     position: absolute;
-    top: 0;
-    left: 40%;
+    border-radius: 50%;
+    top: 0%;
+    left: 30%;
     height: 400px;
-    width: auto;
-    z-index: 2;
+    width: 400px;
+    object-fit: cover;
+    z-index: 1;
 }
 
-.image2 img:last-child {
+.images2 img:last-child {
     display: none;
     position: absolute;
     top: 0;
-    left: 0;
-    height: 500px;
+    left: 60%;
+    height: 400px;
     width: auto;
-    z-index: 0;
     transform: rotate(-90deg);
 }
 
+@media screen and (max-width: 900px) {
+    .container1 {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
+    .images {
+        width: 400px;
+    }
 
+    .images img:first-child {
+        left: 10%;
+    }
+
+    .images img:last-child {
+        left: -90%;
+        top: -20%;
+    }
+
+    .container1 article {
+        margin-bottom: -80px;
+    }
+
+    .container1 article {
+        width: 90%;
+        text-align: center;
+    }
+
+    .container1 article div {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .container2 {
+        flex-direction: column;
+    }
+
+    .images2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .images2 img:first-child {
+        position: relative;
+        left: 0;
+    }
+
+    .container2 article h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .container2 article p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .images img:first-child {
+        left: 10%;
+        width: 260px;
+    }
+
+    .images2 {
+        height: 200px;
+    }
+
+    .images2 img:first-child {
+        height: 260px;
+        width: 260px;
+    }
+}
 </style>
